@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Responsive website</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left-col">
+            <img src="images/logo.png" class="logo">
+            <div class="content">
+                <h1>Add plants to your living space</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt at asperiores molestiae nisi, aspernatur recusandae! Adipisci quidem cupiditate quia laudantium, neque eum mollitia ipsa commodi libero suscipit, hic accusamus dolores?</p>
+           <button type="button">Learn More</button>
+            </div>
+        </div>
+        <div class="right-col">
+            <div class="slider">
+                <img src="images/pic-1.jpg" id="slide">
+            </div>
+            <div class="slider-content">
+                <h2>Where can I find ideal for small rooms?</h2>
+                <hr>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quis consequuntur<br> ducimus 
+                    recusandae voluptas, error porro. Placeat corporis quis illum, recusandae <br>doloribus, accusamus
+                     praesentium sed minus ipsum qui, deserunt iusto!</p>
+
+                     <div class="controller">
+                         <img src="images/back.png" id="backbtn">
+                         <div class="vertical-line"></div>
+                         <img src="images/next.png" id="nextbtn">
+                     </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slide=document.getElementById("slide");
+        var backbtn=document.getElementById("backbtn");
+        var nextbtn=document.getElementById("nextbtn");
+
+        var slideimages=new Array(
+            "images/pic-1.jpg",
+            "images/pic-2.jpg",
+            "images/pic-3.jpg",
+            "images/pic-4.jpg",
+
+
+        );
+        let i=0;
+        nextbtn.onclick =function(){
+            if(i<3){
+                slide.src=slideimages[i+1];
+                i++;
+            }
+            
+        }
+        backbtn.onclick =function(){
+            if(i>0){
+                slide.src=slideimages[i-1];
+                i--;
+            }
+            
+        }
+    </script>
+</body>
+</html>
